@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Canvas Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar for Controls -->
+        <aside class="sidebar">
+            <h1>CollabDraw</h1>
+            
+            <div class="user-selector">
+                <p>Current Artist:</p>
+                <div class="user-tokens">
+                    <button id="btnUserA" class="user-token active" data-user="A">User A</button>
+                    <button id="btnUserB" class="user-token" data-user="B">User B</button>
+                </div>
+                <div id="statusIndicator" class="status-indicator">
+                    You are drawing as <span id="activeUserName">User A</span>
+                </div>
+            </div>
+
+            <div class="toolbar">
+                <button id="btnUndo" title="Undo Last Stroke">Undo</button>
+                <button id="btnRedo" title="Redo Last Stroke">Redo</button>
+                <button id="btnClear" class="danger">Clear Canvas</button>
+            </div>
+
+            <div class="instructions">
+                <h3>How to use:</h3>
+                <ul>
+                    <li>Draw on the white area.</li>
+                    <li>Switch users to simulate collaboration.</li>
+                    <li>Undo/Redo affects everyone!</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Canvas Area -->
+        <main class="canvas-area">
+            <canvas id="drawingCanvas"></canvas>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

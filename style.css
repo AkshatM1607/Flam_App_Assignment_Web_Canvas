@@ -1,0 +1,156 @@
+/* Basic Modern Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 300px;
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a73e8;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.user-selector {
+    margin-bottom: 2rem;
+}
+
+.user-selector p {
+    font-size: 0.9rem;
+    color: #5f6368;
+    margin-bottom: 0.5rem;
+}
+
+.user-tokens {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.user-token {
+    flex: 1;
+    padding: 0.75rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+/* User A (Blue) Styles */
+.user-token[data-user="A"].active {
+    border-color: #1a73e8;
+    background-color: #e8f0fe;
+    color: #1a73e8;
+}
+
+/* User B (Red/Pink) Styles */
+.user-token[data-user="B"].active {
+    border-color: #d93025;
+    background-color: #fce8e6;
+    color: #d93025;
+}
+
+.status-indicator {
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    background-color: #f8f9fa;
+    border: 1px solid #f1f3f4;
+}
+
+/* Toolbar Buttons */
+.toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.toolbar button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #1a73e8;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.toolbar button:hover {
+    background-color: #1557b0;
+}
+
+.toolbar button.danger {
+    background-color: #fff;
+    color: #d93025;
+    border: 1px solid #d93025;
+}
+
+.toolbar button.danger:hover {
+    background-color: #fce8e6;
+}
+
+/* Helper Text */
+.instructions {
+    margin-top: auto;
+    font-size: 0.85rem;
+    color: #5f6368;
+    line-height: 1.5;
+}
+
+.instructions h3 {
+    color: #202124;
+    margin-bottom: 0.5rem;
+}
+
+.instructions ul {
+    padding-left: 1rem;
+}
+
+/* Canvas Area */
+.canvas-area {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#drawingCanvas {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    cursor: crosshair;
+    display: block;
+}
